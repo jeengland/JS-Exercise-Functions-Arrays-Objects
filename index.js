@@ -222,6 +222,17 @@ function sortCarInventory(inventory) {
   return sortedInv;
 }
 
+// ALTERNATE SOLUTION USING CUSTOM SORT FUNCTION 
+
+// function sortCarInventory(inventory) {
+//   let sortedInv = inventory.sort((a,b) => {
+//     if (a.car_model > b.car_model) return 1;
+//     else if (a.car_model < b.car_model) return -1;
+//     else return 0;
+//   });
+//   return sortedInv;
+// }
+
 /**
  * ### Challenge `getModelYears`
  * 
@@ -318,8 +329,14 @@ const argTimesTwo = (num) => num * 2; // code here!
  *         (1) causes the odometer in the object to be increased by the distance,
  *         (2) returns the updated value of the `odometer`.
 */
-function carMaker(/* code here */) {
-  /* code here */
+function carMaker(odo) {
+  let car = {};
+  car.odometer = odo,
+  car.drive = (dist) => {
+    car.odometer += dist;
+    return car.odometer;
+  }
+  return car;
 }
 
 /// ////// END OF CHALLENGE /////////
