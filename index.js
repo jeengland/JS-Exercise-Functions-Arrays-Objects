@@ -286,8 +286,9 @@ function getOlderCars(inventory, max) {
 function getGermanCars(inventory) {
   let newArr = [];
   for (let i = 0; i < inventory.length; i++) {
+    let german = ['Audi', 'Mercedes-Benz', 'Volkswagen', 'BMW']
     let test = inventory[i].car_make;
-    if (test === 'Audi' || test === 'Mercedes-Benz' || test === 'Volkswagen' || test === 'BMW') {
+    if (german.includes(test)) {
       newArr.push(inventory[i]);
     }
   }
