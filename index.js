@@ -295,6 +295,20 @@ function getGermanCars(inventory) {
   return newArr;
 }
 
+// OLD CODE JUST IN CASE INCLUDES ISN'T ALLOWED 
+
+// function getGermanCars(inventory) {
+//   let newArr = [];
+//   for (let i = 0; i < inventory.length; i++) {
+//     let test = inventory[i].car_make;
+//     if (test === 'Audi' || test === 'Mercedes-Benz' || test === 'Volkswagen' || test === 'BMW') {
+//       newArr.push(inventory[i]);
+//     }
+//   }
+//   return newArr;
+// }
+
+
 /**
  * ### Challenge refactor to arrow functions
  * 
